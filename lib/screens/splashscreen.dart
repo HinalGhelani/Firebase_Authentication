@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 2),
       () => Navigator.of(context).pushReplacementNamed('/'),
     );
   }
@@ -22,10 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset(
-          "assets/images/logo.png",
-          height: 200,
+      body: SafeArea(
+        child: Center(
+          child: Image.asset("assets/images/logo.png", height: 200),
         ),
       ),
     );
